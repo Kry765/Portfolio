@@ -48,21 +48,25 @@ body {
 
 	//DESKTOP NAV
 
-	&__desktop-nav-items {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
+	&__desktop-menu-items {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 1.5em;
 	}
-}
-
-.toggle-menu-nav {
-	display: none;
+	&__desktop-menu-item {
+		padding: 1.5em;
+	}
 }
 
 @media (min-width: 768px) {
 	.nav {
 		&__burger-icon {
 			display: none;
+		}
+		&__desktop-menu-items {
+			display: block;
 		}
 	}
 }

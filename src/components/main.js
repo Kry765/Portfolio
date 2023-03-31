@@ -15,12 +15,13 @@ export default class Main extends React.Component {
 			<div>
 				<nav className='nav'>
 					{/*DESKTOP NAV*/}
-					<div className='nav__desktop-nav-items'>
-						<div className='desktop-nav-items__desktop-menu-item'>About Me</div>
-						<div className='desktop-nav-items__desktop-menu-item'>Skills</div>
-						<div className='desktop-nav-items__desktop-menu-item'>Certyfication</div>
-						<div className='desktop-nav-items__desktop-menu-item'>Concact me</div>
+					<div className='nav__desktop-menu-items'>
+						<a className='nav__desktop-menu-item'>About Me</a>
+						<a className='nav__desktop-menu-item'>Skills</a>
+						<a className='nav__desktop-menu-item'>Certyfication</a>
+						<a className='nav__desktop-menu-item'>Concact me</a>
 					</div>
+
 					{/*MOBILE NAV*/}
 					<button onClick={this.ToggleClass}>
 						<IconMenu2 className='nav__burger-icon' />
