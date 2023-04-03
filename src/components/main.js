@@ -33,14 +33,22 @@ export default class Main extends React.Component {
 								<IconMenu2 className='nav__burger-icon' />
 							</button>
 						</div>
-						<div className={isActive ? 'nav__mobile-menu-items ' : 'nav__mobile-menu-items--active nav__mobile-menu-items--animation'}>
+						<div className={isActive ? 'nav__mobile-menu-items' : 'nav__mobile-menu-items--active'}>
 							<div className='nav__mobile-menu-item'>About Me</div>
 							<div className='nav__mobile-menu-item'>Skills</div>
 							<div className='nav__mobile-menu-item'>Certyfication</div>
 							<div className='nav__mobile-menu-item'>Concact me</div>
 						</div>
+					
 					</div>
 				</nav>
+				<header>
+					<div className='header'>	
+							<h1 className='header__title'>Hi My name is Chris</h1>
+							<p className='header__text'>thank you for being here, let me tell you something about myself</p>
+							<button className='header__button'>Let's Go</button>
+					</div>
+				</header>
 			</div>
 		)
 	}
