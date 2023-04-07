@@ -1,11 +1,15 @@
+@use './mixins' as *;
 //ROOT
-
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+button{
+	border: none;
 }
 
 body {
@@ -17,91 +21,64 @@ body {
 	background-color: rgba(150, 157, 163, 0.144);
 	width: 100%;
 	height: 100px;
-
 	//LOGO
-	&__logo {
+	&--logo {
 		position: fixed;
 		left: 0;
-		width: 50px;
+		width: 40px;
 		height: 50px;
 		margin: 15px 25px;
 		z-index: 100;
 	}
-
 	//MOBILE NAV
 	&__burger-icon {
-		position: fixed;
-		right: 0;
-		width: 15%;
-		width: 50px;
-		height: 50px;
-		margin: 0 20px;
-		z-index: 100;
-		border: none;
+		@include toggleBurgerIcon
 	}
-
+	&__close-icon{
+		display: none;
+		@include toggleBurgerIcon
+	}
 	&:hover {
 		cursor: pointer;
 	}
-
-	&__mobile-menu-items {
-		animation: CloseNav 1s both;
-		position: fixed;
-		right: 0;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		width: 75vw;
-		height: 100vh;
-		padding-top: 10vh;
-		background-color: #f307072c;
-		transform: translateX(0);
+	&__mobile-items {
+        animation: CloseNav 1s both;
+		@include navStyle();
+    }
+    &__mobile-items--active {
+        animation: OpenNav 1s both;   
+  	  	@include navStyle();
 	}
+    @keyframes OpenNav {
+        from {
+            transform: translateX(700px);
+        }
+        to {
+            transform: translateX(0px);
+        }
+    }
 	@keyframes CloseNav {
-		from {
-			transform: translateX(0px);
-		}
-		to {
-			transform: translateX(700px);
-		}
-	}
-
-	&__mobile-menu-items--active {
-		animation: OpenNav 1s both;
-		position: fixed;
-		right: 0;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		width: 75vw;
-		height: 100vh;
-		padding-top: 10vh;
-		background-color: #f307072c;
-		transform: translateX(0);
-	}
-	@keyframes OpenNav {
-		from {
-			transform: translateX(700px);
-		}
-		to {
-			transform: translateX(0px);
-		}
-	}
-	
-	&__mobile-menu-item {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            transform: translateX(700px);
+        }
+    }
+	&__mobile-item {
 		margin: 20px;
 	}
 
 	//DESKTOP NAV
 
-	&__desktop-menu-items {
+	&__desktop-items {
 		display: none;
 		position: absolute;
 		top: 0;
 		right: 0;
 		margin: 2em;
 	}
-	&__desktop-menu-item {
+	&__desktop-item {
 		padding: 1.5em;
 	}
 }
@@ -132,11 +109,12 @@ body {
 @media (min-width: 768px) {
 	.nav {
 		&__burger-icon,
-		&__mobile-menu-item,
-		&__mobile-menu-items {
+		// &__close-icon,
+		&__mobile-item,
+		&__mobile-items {
 			display: none;
 		}
-		&__desktop-menu-items {
+		&__desktop-items {
 			display: block;
 		}
 	}
