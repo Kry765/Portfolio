@@ -1,10 +1,11 @@
-import Main from './components/main'
+import Menu from './components/Menu'
+import Header from './components/Header'
 
 function App() {
 	return (
 		<div className='App'>
-			{/* <Main /> */}
-			<App />
+			<Menu />
+			<Header />
 		</div>
 	)
 }

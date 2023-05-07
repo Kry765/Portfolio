@@ -1,0 +1,89 @@
+@use './mixins' as *;
+
+.nav {
+	position: fixed;
+	background-color: rgba(150, 157, 163, 0.144);
+	width: 100%;
+	height: 100px;
+
+	//LOGO
+	&__logo {
+		position: fixed;
+		left: 0;
+		width: 40px;
+		height: 50px;
+		margin: 15px 25px;
+		z-index: 100;
+	}
+
+	//MOBILE NAV
+	&__burger-icon {
+		position: fixed;
+		right: 0;
+		width: 15%;
+		width: 50px;
+		height: 50px;
+		margin: 0 20px;
+		z-index: 100;
+		border: none;
+	}
+
+	&__close-icon {
+		display: none;
+	}
+
+	&__mobile-items {
+		animation: CloseNav 1s both;
+		@include navStyle();
+	}
+	&__mobile-items--active {
+		animation: OpenNav 1s both;
+		@include navStyle();
+	}
+
+	@keyframes OpenNav {
+		from {
+			transform: translateX(700px);
+		}
+		to {
+			transform: translateX(0px);
+		}
+	}
+	@keyframes CloseNav {
+		from {
+			transform: translateX(0px);
+		}
+		to {
+			transform: translateX(700px);
+		}
+	}
+
+	&__mobile-item {
+		margin: 20px;
+	}
+
+	//DESKTOP NAV
+	&__desktop-items {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 2em;
+	}
+	&__desktop-item {
+		padding: 1.5em;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__burger-icon,
+		&__close-icon,
+		&__mobile-items {
+			display: none;
+		}
+		&__desktop-items {
+			display: block;
+		}
+	}
+}

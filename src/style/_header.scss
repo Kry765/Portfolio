@@ -1,0 +1,28 @@
+//MOBILE HEADER
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	height: 80vh;
+	&__title {
+		margin: 1em;
+	}
+	&__text {
+		padding: 1em;
+	}
+	&__button {
+		padding: 10px 25px;
+		border-radius: 20px;
+		border: 1px solid #aca1a1d7;
+		background-color: #fff;
+		transition: all 0.4s;
+	}
+	&__button:hover {
+		background-color: rgba(120, 224, 120, 0.63);
+		color: #fff;
+		cursor: pointer;
+	}
+}
