@@ -1,5 +1,6 @@
 import '../style/reset.scss'
 import '../style/_skills.scss'
+import pglogo from '../img/pglogo.png'
 
 export default function Skills() {
 	return (
@@ -7,7 +8,7 @@ export default function Skills() {
 			<h1>Skills</h1>
 			<div className='skills__cards'>
 				<div className='skills__card'>
-					<div></div>
+					<img src={pglogo} alt='postgres logo' className='skills_logo' />
 					<p>PostgreSQL</p>
 				</div>
 				<div className='skills__card'>

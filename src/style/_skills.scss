@@ -9,14 +9,17 @@
 		flex-wrap: wrap;
 	}
 	&__card {
+		// position: relative;
+		overflow: hidden;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
+		flex-direction: column;
 		justify-content: center;
 		height: 400px;
 		width: 300px;
 		margin: 2em;
 		border: 1px solid gray;
 		text-align: center;
-		padding: 1.5em;
+		// padding: 1.5em;
 	}
 }

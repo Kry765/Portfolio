@@ -2,6 +2,7 @@ import Menu from './components/Menu'
 import Header from './components/Header'
 import Aboutme from './components/Aboutme'
 import Skills from './components/Skills'
+import Certyfication from './components/Certyfication'
 
 function App() {
 	return (
@@ -18,6 +19,9 @@ function App() {
 				</section>
 				<section>
 					<Skills />
+				</section>
+				<section>
+					<Certyfication />
 				</section>
 			</main>
 		</div>
