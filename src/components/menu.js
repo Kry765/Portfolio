@@ -14,33 +14,29 @@ export default function Menu() {
 	}
 
 	return (
-		<div>
-			<nav>
-				<div className='nav'>
-					{/*LOGO */}
-					<IconBrandCodepen className='nav__logo' />
-					{/*DESKTOP NAV*/}
-					<div className='nav__desktop-items'>
-						<a className='nav__desktop-item'>About Me</a>
-						<a className='nav__desktop-item'>Skills</a>
-						<a className='nav__desktop-item'>Certyfication</a>
-						<a className='nav__desktop-item'>Concact me</a>
-					</div>
-					{/*MOBILE NAV*/}
-					<div>
-						<button>
-							<IconMenu2 className='nav__burger-icon' onClick={toggleNav} />
-							<IconX className='nav__close-icon' />
-						</button>
-					</div>
-					<div className={navOpen ? 'nav__mobile-items--active' : 'nav__mobile-items'}>
-						<div className='nav__mobile-item'>About Me</div>
-						<div className='nav__mobile-item'>Skills</div>
-						<div className='nav__mobile-item'>Certyfication</div>
-						<div className='nav__mobile-item'>Concact me</div>
-					</div>
-				</div>
-			</nav>
+		<div className='nav'>
+			{/*LOGO */}
+			<IconBrandCodepen className='nav__logo' />
+			{/*DESKTOP NAV*/}
+			<div className='nav__desktop-items'>
+				<a className='nav__desktop-item'>About Me</a>
+				<a className='nav__desktop-item'>Skills</a>
+				<a className='nav__desktop-item'>Certyfication</a>
+				<a className='nav__desktop-item'>Concact me</a>
+			</div>
+			{/*MOBILE NAV*/}
+			<div>
+				<button>
+					<IconMenu2 className='nav__burger-icon' onClick={toggleNav} />
+					<IconX className='nav__close-icon' />
+				</button>
+			</div>
+			<div className={navOpen ? 'nav__mobile-items--active' : 'nav__mobile-items'}>
+				<div className='nav__mobile-item'>About Me</div>
+				<div className='nav__mobile-item'>Skills</div>
+				<div className='nav__mobile-item'>Certyfication</div>
+				<div className='nav__mobile-item'>Concact me</div>
+			</div>
 		</div>
 	)
 }

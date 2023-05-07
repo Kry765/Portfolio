@@ -6,10 +6,20 @@ import Skills from './components/Skills'
 function App() {
 	return (
 		<div className='App'>
-			<Menu />
-			<Header />
-			<Aboutme />
-			<Skills />
+			<nav>
+				<Menu />
+			</nav>
+			<header>
+				<Header />
+			</header>
+			<main>
+				<section>
+					<Aboutme />
+				</section>
+				<section>
+					<Skills />
+				</section>
+			</main>
 		</div>
 	)
 }
