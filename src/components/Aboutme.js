@@ -6,7 +6,7 @@ export default function Aboutme() {
 	return (
 		<header>
 			<div className='about-me'>
-				<h1>About</h1>
+				<h1>About me</h1>
 				<div className='about-me__card'>
 					<div className='about-me__foto'>
 						<img src={picture} />
