@@ -1,0 +1,42 @@
+.about-me {
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 100%;
+	min-height: 100vh;
+	&__card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		max-width: 100%;
+	}
+	&__foto {
+		max-width: 50%;
+		background-color: lime;
+		overflow: hidden;
+	}
+	&__text {
+		max-width: 50%;
+		overflow: hidden;
+		overflow-wrap: break-word;
+		background-color: aqua;
+	}
+}
+
+@media (min-width: 768px) {
+	.about-me {
+		&__card {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			&__text {
+				max-width: 100%;
+			}
+			&__foto {
+				max-width: 100%;
+			}
+		}
+	}
+}
