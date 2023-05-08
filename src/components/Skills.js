@@ -1,6 +1,12 @@
 import '../style/reset.scss'
 import '../style/_skills.scss'
-import pglogo from '../img/pglogo.png'
+import { DiPostgresql } from 'react-icons/di'
+import { AiFillHtml5 } from 'react-icons/ai'
+import { FaSass } from 'react-icons/fa'
+import { IoLogoCss3 } from 'react-icons/io'
+import { DiJavascript } from 'react-icons/di'
+import { SiReact } from 'react-icons/si'
+import { FaNodeJs } from 'react-icons/fa'
 
 export default function Skills() {
 	return (
@@ -8,31 +14,52 @@ export default function Skills() {
 			<h1>Skills</h1>
 			<div className='skills__cards'>
 				<div className='skills__card'>
-					<img src={pglogo} alt='postgres logo' className='skills_logo' />
+					<div>
+						<DiPostgresql className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>PostgreSQL</p>
 				</div>
 				<div className='skills__card'>
-					<div></div>
+					<div>
+						<SiReact className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>React</p>
 				</div>
 				<div className='skills__card'>
-					<div></div>
+					<div>
+						<DiJavascript className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>JavaScript</p>
 				</div>
 				<div className='skills__card'>
-					<div></div>
+					<div>
+						<IoLogoCss3 className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>CSS</p>
 				</div>
 				<div className='skills__card'>
-					<div></div>
+					<div>
+						<FaSass className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>SCSS</p>
 				</div>
 				<div className='skills__card'>
-					<div></div>
+					<div>
+						<AiFillHtml5 className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>HTML</p>
 				</div>
 				<div className='skills__card'>
-					<div></div>
+					<div>
+						<FaNodeJs className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
 					<p>Nodejs</p>
 				</div>
 			</div>

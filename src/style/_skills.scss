@@ -22,4 +22,12 @@
 		text-align: center;
 		// padding: 1.5em;
 	}
+	&__icon {
+		font-size: 15rem;
+	}
+	&__progress-bar {
+		width: 80%;
+		height: 10px;
+		background-color: aqua;
+	}
 }

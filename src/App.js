@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Aboutme from './components/Aboutme'
 import Skills from './components/Skills'
 import Certyfication from './components/Certyfication'
+import Footer from './components/Footer'
 
 function App() {
 	return (
@@ -24,6 +25,9 @@ function App() {
 					<Certyfication />
 				</section>
 			</main>
+			<footer>
+				<Footer />
+			</footer>
 		</div>
 	)
 }
