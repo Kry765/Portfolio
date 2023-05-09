@@ -5,8 +5,20 @@
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
+	padding-top: 8em;
 	width: 100%;
 	height: 100vh;
+	&__primary-photo{
+		width: 350px;
+		height: 350px;
+	}
+	&__header-wrapper{
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 	&__title {
 		margin: 1em;
 	}
@@ -14,6 +26,9 @@
 		padding: 1em;
 	}
 	&__button {
+		width: 9em;
+		height: 3em;
+		margin: 1em;
 		padding: 10px 25px;
 		border-radius: 20px;
 		border: 1px solid #aca1a1d7;
