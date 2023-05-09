@@ -4,6 +4,7 @@ import Aboutme from './components/Aboutme'
 import Skills from './components/Skills'
 import Certyfication from './components/Certyfication'
 import Footer from './components/Footer'
+import React from "react";
 
 function App() {
 	return (

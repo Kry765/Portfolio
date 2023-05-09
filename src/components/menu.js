@@ -15,16 +15,13 @@ export default function Menu() {
 
 	return (
 		<div className='nav'>
-			{/*LOGO */}
 			<IconBrandCodepen className='nav__logo' />
-			{/*DESKTOP NAV*/}
 			<div className='nav__desktop-items'>
 				<a className='nav__desktop-item'>About Me</a>
 				<a className='nav__desktop-item'>Skills</a>
 				<a className='nav__desktop-item'>Certyfication</a>
 				<a className='nav__desktop-item'>Concact me</a>
 			</div>
-			{/*MOBILE NAV*/}
 			<div>
 				<button>
 					<IconMenu2 className='nav__burger-icon' onClick={toggleNav} />

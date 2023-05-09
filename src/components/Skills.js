@@ -7,10 +7,11 @@ import { IoLogoCss3 } from 'react-icons/io'
 import { DiJavascript } from 'react-icons/di'
 import { SiReact } from 'react-icons/si'
 import { FaNodeJs } from 'react-icons/fa'
+import {AiFillGithub} from 'react-icons/ai'
 
 export default function Skills() {
 	return (
-		<div className='skills'>
+		<div className='skills' id="#skills">
 			<h1>Skills</h1>
 			<div className='skills__cards'>
 				<div className='skills__card'>
@@ -54,6 +55,13 @@ export default function Skills() {
 					</div>
 					<div className='skills__progress-bar'></div>
 					<p>HTML</p>
+				</div>
+				<div className='skills__card'>
+					<div>
+						<AiFillGithub className='skills__icon' />
+					</div>
+					<div className='skills__progress-bar'></div>
+					<p>GitHub</p>
 				</div>
 				<div className='skills__card'>
 					<div>
