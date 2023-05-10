@@ -5,6 +5,7 @@ import '../style/reset.scss'
 import '../style/_menu.scss'
 import '../style/_mixins.scss'
 import { useState } from 'react'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 export default function Menu() {
 	const [navOpen, navClose] = useState(false)
@@ -13,14 +14,26 @@ export default function Menu() {
 		navClose(!navOpen)
 	}
 
+	const scrollToTop = () => {
+		scroll.scrollToTop()
+	}
+
 	return (
-		<div className='nav'>
-			<IconBrandCodepen className='nav__logo' />
+		<div className='nav' id='Menu'>
+			<IconBrandCodepen className='nav__logo' onClick={scrollToTop} />
 			<div className='nav__desktop-items'>
-				<a className='nav__desktop-item'>About Me</a>
-				<a className='nav__desktop-item'>Skills</a>
-				<a className='nav__desktop-item'>Certyfication</a>
-				<a className='nav__desktop-item'>Concact me</a>
+				<Link to='Aboutme' smooth={true} offset={-70} duration={500} className='nav__desktop-item'>
+					About Me
+				</Link>
+				<Link to='Skills' smooth={true} offset={-70} duration={500} className='nav__desktop-item'>
+					Skills
+				</Link>
+				<Link to='Certyfication' smooth={true} offset={-70} duration={500} className='nav__desktop-item'>
+					Certyfication
+				</Link>
+				<Link to='Contact' smooth={true} offset={-70} duration={500} className='nav__desktop-item'>
+					Concact me
+				</Link>
 			</div>
 			<div>
 				<button>
@@ -29,10 +42,26 @@ export default function Menu() {
 				</button>
 			</div>
 			<div className={navOpen ? 'nav__mobile-items--active' : 'nav__mobile-items'}>
-				<div className='nav__mobile-item'>About Me</div>
-				<div className='nav__mobile-item'>Skills</div>
-				<div className='nav__mobile-item'>Certyfication</div>
-				<div className='nav__mobile-item'>Concact me</div>
+				<div className='nav__mobile-item'>
+					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
+						About Me
+					</Link>
+				</div>
+				<div className='nav__mobile-item'>
+					<Link to='Skills' smooth={true} offset={-70} duration={500}>
+						Skills
+					</Link>
+				</div>
+				<div className='nav__mobile-item'>
+					<Link to='Certyfication' smooth={true} offset={-70} duration={500}>
+						Certyfication
+					</Link>
+				</div>
+				<div className='nav__mobile-item'>
+					<Link to='Contact' smooth={true} offset={-70} duration={500}>
+						Concact me
+					</Link>
+				</div>
 			</div>
 		</div>
 	)

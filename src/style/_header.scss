@@ -1,4 +1,3 @@
-//MOBILE HEADER
 .header {
 	display: flex;
 	justify-content: center;
@@ -8,16 +7,16 @@
 	padding-top: 3em;
 	width: 100%;
 	height: 100vh;
-	&__primary-photo{
+	&__primary-photo {
 		width: 400px;
 		height: 400px;
 		padding: 20px;
-		transition: padding .5s;
+		transition: padding 0.5s;
 	}
-	&__primary-photo:hover{
+	&__primary-photo:hover {
 		padding: 5px;
 	}
-	&__header-wrapper{
+	&__header-wrapper {
 		display: flex;
 		justify-content: center;
 		flex-direction: row;
@@ -26,7 +25,55 @@
 	}
 	&__title {
 		margin: 1em;
+		position: relative;
 	}
+
+	@keyframes writetext {
+	}
+	&__title::after {
+		position: absolute;
+		right: -5px;
+		bottom: 5px;
+		height: 20px;
+		width: 1px;
+		height: 20px;
+		margin-top: 10px;
+		background-color: black;
+		content: '';
+		animation: cursor-bottom 1s infinite;
+		animation-direction: alternate-reverse;
+		transform: scaleY(-2);
+	}
+	@keyframes cursor-bottom {
+		from {
+			height: 0px;
+		}
+		to {
+			height: 20px;
+		}
+	}
+	// &__title::before {
+	// 	position: absolute;
+	// 	right: -5px;
+	// 	bottom: 5px;
+	// 	width: 1px;
+	// 	height: 0px;
+	// 	margin-bottom: 10px;
+	// 	background-color: black;
+	// 	content: '';
+	// 	animation: cursor-top 1s infinite;
+	// 	animation-direction: alternate;
+	// }
+
+	@keyframes cursor-top {
+		from {
+			height: 20px;
+		}
+		to {
+			height: 0px;
+		}
+	}
+
 	&__text {
 		padding: 1em;
 	}

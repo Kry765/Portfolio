@@ -73,6 +73,9 @@
 	&__desktop-item {
 		padding: 1.5em;
 	}
+	&__desktop-item:hover {
+		cursor: pointer;
+	}
 }
 
 @media (min-width: 768px) {
