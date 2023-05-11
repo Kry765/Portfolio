@@ -1,4 +1,121 @@
 .header {
+	&__title {
+		color: #fff;
+		padding-top: 3em;
+	}
+	&__letter1 {
+		animation: letter forwards;
+		animation-delay: 0.5s;
+	}
+	&__letter2 {
+		animation: letter forwards;
+		animation-delay: 0.7s;
+	}
+	&__letter4 {
+		animation: letter forwards;
+		animation-delay: 1s;
+	}
+	&__letter5 {
+		animation: letter forwards;
+		animation-delay: 1.05s;
+	}
+	&__letter6 {
+		animation: letter forwards;
+		animation-delay: 1.1s;
+	}
+	&__letter7 {
+		animation: letter forwards;
+		animation-delay: 1.15s;
+	}
+	&__letter8 {
+		animation: letter forwards;
+		animation-delay: 1.2s;
+	}
+	&__letter9 {
+		animation: letter forwards;
+		animation-delay: 1.25s;
+	}
+	&__letter10 {
+		animation: letter forwards;
+		animation-delay: 1.3s;
+	}
+	&__letter11 {
+		animation: letter forwards;
+		animation-delay: 1.35s;
+	}
+	&__letter12 {
+		animation: letter forwards;
+		animation-delay: 1.4s;
+	}
+	&__letter13 {
+		animation: letter forwards;
+		animation-delay: 1.45s;
+	}
+	&__letter14 {
+		animation: letter forwards;
+		animation-delay: 1.5s;
+	}
+	&__letter15 {
+		animation: letter forwards;
+		animation-delay: 1.55s;
+	}
+	&__letter16 {
+		animation: letter forwards;
+		animation-delay: 1.6s;
+	}
+	&__letter17 {
+		animation: letter forwards;
+		animation-delay: 1.65s;
+	}
+	&__letter18 {
+		animation: letter forwards;
+		animation-delay: 1.7s;
+	}
+	&__letter19 {
+		animation: letter forwards;
+		animation-delay: 1.8s;
+	}
+	&__letter20 {
+		animation: letter forwards;
+		animation-delay: 1.9s;
+	}
+	&__letter21 {
+		animation: letter forwards;
+		animation-delay: 2s;
+	}
+	&__letter22 {
+		animation: letter forwards;
+		animation-delay: 2.1s;
+	}
+	&__letter23 {
+		animation: letter forwards;
+		animation-delay: 2.2s;
+	}
+	&__letter24 {
+		animation: letter forwards;
+		animation-delay: 2.3s;
+	}
+	&__letter24 {
+		animation: letter forwards;
+		animation-delay: 2.4s;
+	}
+	&__letter25 {
+		animation: letter forwards;
+		animation-delay: 2.5s;
+	}
+
+	@keyframes letter {
+		from {
+			opacity: 0;
+			visibility: hidden;
+		}
+		to {
+			opacity: 1;
+			visibility: visible;
+			color: #000;
+		}
+	}
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -28,49 +145,23 @@
 		position: relative;
 	}
 
-	@keyframes writetext {
-	}
 	&__title::after {
-		position: absolute;
-		right: -5px;
-		bottom: 5px;
-		height: 20px;
-		width: 1px;
-		height: 20px;
-		margin-top: 10px;
+		display: none;
+		// position: absolute;
+		height: 40px;
+		width: 1.5px;
 		background-color: black;
 		content: '';
-		animation: cursor-bottom 1s infinite;
-		animation-direction: alternate-reverse;
-		transform: scaleY(-2);
+		animation: cursor-bottom 0.5s infinite;
+		animation-delay: 0.5s;
 	}
+
 	@keyframes cursor-bottom {
 		from {
-			height: 0px;
+			opacity: 0;
 		}
 		to {
-			height: 20px;
-		}
-	}
-	// &__title::before {
-	// 	position: absolute;
-	// 	right: -5px;
-	// 	bottom: 5px;
-	// 	width: 1px;
-	// 	height: 0px;
-	// 	margin-bottom: 10px;
-	// 	background-color: black;
-	// 	content: '';
-	// 	animation: cursor-top 1s infinite;
-	// 	animation-direction: alternate;
-	// }
-
-	@keyframes cursor-top {
-		from {
-			height: 20px;
-		}
-		to {
-			height: 0px;
+			opacity: 1;
 		}
 	}
 
@@ -91,5 +182,16 @@
 		background-color: rgba(120, 224, 120, 0.63);
 		color: #fff;
 		cursor: pointer;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__title::after {
+			display: block;
+			position: absolute;
+			left: 410px;
+			top: 90px;
+		}
 	}
 }
