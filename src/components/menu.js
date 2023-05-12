@@ -14,6 +14,10 @@ export default function Menu() {
 		setOpenNav(!navOpen)
 	}
 
+	const pauseAnimation = () => {
+		setOpenNav(false)
+	}
+
 	const scrollToTop = () => {
 		scroll.scrollToTop()
 	}
@@ -41,7 +45,10 @@ export default function Menu() {
 					<IconX className='nav__close-icon' />
 				</button>
 			</div>
-			<div className={navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'}>
+			<div
+				className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'} ${
+					pauseAnimation ? 'active' : 'paused'
+				}`}>
 				<div className='nav__mobile-item'>
 					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
 						About Me

@@ -35,33 +35,35 @@
 	}
 
 	&__mobile-items {
+		transform: translateX(0%);
 		&--active {
-			// animation: OpenNav 1s both;
-			transform: translateX(-100%);
-			background-color: aqua;
+			animation: CloseNav 1s both;
+			transform: translateX(0%);
 		}
 		&--close {
-			// animation: CloseNav 1s both;
+			animation: OpenNav 1s both;
 			transform: translateX(0%);
 		}
 	}
 
-	// @keyframes OpenNav {
-	// 	from {
-	// 		transform: translateX(700px);
-	// 	}
-	// 	to {
-	// 		transform: translateX(0px);
-	// 	}
-	// }
-	// @keyframes CloseNav {
-	// 	from {
-	// 		transform: translateX(0px);
-	// 	}
-	// 	to {
-	// 		transform: translateX(700px);
-	// 	}
-	// }
+	@keyframes OpenNav {
+		from {
+			opacity: 0;
+			transform: translateX(700px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+	@keyframes CloseNav {
+		from {
+			transform: translateX(0px);
+		}
+		to {
+			transform: translateX(700px);
+		}
+	}
 
 	&__mobile-item {
 		margin: 20px;
