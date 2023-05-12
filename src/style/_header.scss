@@ -106,11 +106,11 @@
 
 	@keyframes letter {
 		from {
-			opacity: 0;
+			width: 0;
 			visibility: hidden;
 		}
 		to {
-			opacity: 1;
+			width: 100%;
 			visibility: visible;
 			color: #000;
 		}
@@ -141,19 +141,19 @@
 		flex-wrap: wrap;
 	}
 	&__title {
-		margin: 1em;
-		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: move-text 3s;
+		animation-delay: 2s;
 	}
 
-	&__title::after {
-		display: none;
-		// position: absolute;
+	&__letter25::after {
+		left: 0;
 		height: 40px;
 		width: 1.5px;
 		background-color: black;
 		content: '';
 		animation: cursor-bottom 0.5s infinite;
-		animation-delay: 0.5s;
 	}
 
 	@keyframes cursor-bottom {
@@ -188,7 +188,6 @@
 @media (min-width: 768px) {
 	.header {
 		&__title::after {
-			display: block;
 			position: absolute;
 			left: 410px;
 			top: 90px;

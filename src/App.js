@@ -2,11 +2,10 @@ import React from 'react'
 import Menu from './components/Menu'
 import Header from './components/Header'
 import Aboutme from './components/Aboutme'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-import Certyfication from './components/Certyfication'
-
-import Footer from './components/Footer'
+// import Skills from './components/Skills'
+// import Contact from './components/Contact'
+// import Certyfication from './components/Certyfication'
+// import Footer from './components/Footer'
 
 function App() {
 	return (
@@ -17,11 +16,11 @@ function App() {
 			<header>
 				<Header id='Header' />
 			</header>
-			<main>
-				<section>
-					<Aboutme id='Aboutme' />
-				</section>
-				<section>
+			{/*<main>*/}
+			<section>
+				<Aboutme id='Aboutme' />
+			</section>
+			{/*<section>
 					<Skills id='Skills' />
 				</section>
 				<section>
@@ -33,7 +32,7 @@ function App() {
 			</main>
 			<footer>
 				<Footer />
-			</footer>
+			</footer> */}
 		</div>
 	)
 }

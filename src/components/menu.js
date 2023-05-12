@@ -8,10 +8,10 @@ import { useState } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 export default function Menu() {
-	const [navOpen, navClose] = useState(false)
+	const [navOpen, setOpenNav] = useState(false)
 
 	const toggleNav = () => {
-		navClose(!navOpen)
+		setOpenNav(!navOpen)
 	}
 
 	const scrollToTop = () => {
@@ -41,7 +41,7 @@ export default function Menu() {
 					<IconX className='nav__close-icon' />
 				</button>
 			</div>
-			<div className={navOpen ? 'nav__mobile-items--active' : 'nav__mobile-items'}>
+			<div className={navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'}>
 				<div className='nav__mobile-item'>
 					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
 						About Me
