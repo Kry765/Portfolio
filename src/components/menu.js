@@ -10,15 +10,16 @@ import { CSSTransition } from 'react-transition-group'
 
 export default function Menu() {
 	const [navOpen, setOpenNav] = useState(false)
-	const [showAnimation, setShowAnimation] = useState(false)
+	const [openAnimation, setOpenAnimation] = useState(false)
 
-	const handleClick = () => {
-		setShowAnimation(true)
+	const handleAnimation = () => {
+		setOpenAnimation(true)
+		setTimeout(() => {
+			setOpenAnimation(false)
+		}, 5000)
 	}
 
-	const handleAnimationEnd = () => {
-		setShowAnimation(false)
-	}
+	const bottomLine = openAnimation ? 'nav__mobile-item active' : 'your-component__mobile-item'
 
 	const toggleNav = () => {
 		setOpenNav(!navOpen)
@@ -65,43 +66,40 @@ export default function Menu() {
 						className='nav__burger-icon'
 						onClick={() => {
 							toggleNav()
-							handleClick()
+							handleAnimation()
 						}}>
 						<div className='nav__burger-hight-line'></div>
 						<div className='nav__burger-center-line'></div>
+						<div className='nav__burger-secondly-line'></div>
 						<div className='nav__burger-bottom-line'></div>
 					</div>
 				</button>
 			</div>
-			<CSSTransition
-				in={showAnimation}
-				timeout={300}
-				classNames='animation-mobile-item'
-				unmountOnExit
-				onExited={handleAnimationEnd}>
-				<div className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'}`}>
-					<div className='nav__mobile-item'>
-						<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
-							About Me
-						</Link>
-					</div>
-					<div className='nav__mobile-item'>
-						<Link to='Skills' smooth={true} offset={-70} duration={500}>
-							Skills
-						</Link>
-					</div>
-					<div className='nav__mobile-item'>
-						<Link to='Certyfication' smooth={true} offset={-70} duration={500}>
-							Certyfication
-						</Link>
-					</div>
-					<div className='nav__mobile-item'>
-						<Link to='Contact' smooth={true} offset={-70} duration={500}>
-							Concact me
-						</Link>
-					</div>
+			<div
+				className={`nav__mobile-items ${
+					navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'
+				} bottomLine`}>
+				<div className='nav__mobile-item'>
+					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
+						About Me
+					</Link>
 				</div>
-			</CSSTransition>
+				<div className='nav__mobile-item'>
+					<Link to='Skills' smooth={true} offset={-70} duration={500}>
+						Skills
+					</Link>
+				</div>
+				<div className='nav__mobile-item'>
+					<Link to='Certyfication' smooth={true} offset={-70} duration={500}>
+						Certyfication
+					</Link>
+				</div>
+				<div className='nav__mobile-item'>
+					<Link to='Contact' smooth={true} offset={-70} duration={500}>
+						Concact me
+					</Link>
+				</div>
+			</div>
 		</div>
 	)
 }

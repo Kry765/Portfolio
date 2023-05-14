@@ -1,4 +1,4 @@
-//ROOT
+@use './_colors.scss' as *;
 *,
 *::before,
 *::after {
@@ -7,11 +7,11 @@
 	padding: 0;
 }
 
-button{
+button {
 	border: none;
 }
 
 body {
+	background-color: $main-color;
 	font-family: 'Ubuntu', sans-serif;
 }
-

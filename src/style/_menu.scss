@@ -36,6 +36,9 @@
 		right: 0;
 		top: 0;
 		margin: 0.1em;
+		z-index: 100;
+		// animation: rotate-secondly-burger 1s both;
+
 		// padding: 10px;
 		// background-color: aqua;
 		// width: 50px;
@@ -51,7 +54,18 @@
 		margin: 1em;
 		border-radius: 10px;
 	}
+
 	&__burger-center-line {
+		position: relative;
+		background-color: $main-color;
+		height: 5px;
+		width: 50px;
+		margin: 1em;
+		border-radius: 10px;
+	}
+	&__burger-secondly-line {
+		position: absolute;
+		top: 18px;
 		background-color: $main-color;
 		height: 5px;
 		width: 50px;
@@ -65,6 +79,33 @@
 		margin: 1em;
 		border-radius: 10px;
 	}
+
+	@keyframes rotate-icon {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(45deg);
+		}
+	}
+	@keyframes rotate-secondly-burger {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(135deg);
+		}
+	}
+
+	@keyframes hidden-burger {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
 	&__mobile-items {
 		transform: translateX(0%);
 		&--active {

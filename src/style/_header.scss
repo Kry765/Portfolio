@@ -183,6 +183,7 @@
 		font-weight: bold;
 		background-color: $menu-color;
 		color: $main-color;
+		cursor: pointer;
 		&--awarded {
 			width: 12em;
 			height: 4em;
@@ -192,8 +193,10 @@
 			transition: all 0.4s;
 			text-transform: uppercase;
 			font-weight: bold;
-			background-color: $secondly-color;
+			// border: 3px solid $menu-color;
+			background-color: $sea-color;
 			color: $main-color;
+			cursor: pointer;
 		}
 	}
 }
