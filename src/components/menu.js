@@ -6,16 +6,22 @@ import '../style/_menu.scss'
 import '../style/_mixins.scss'
 import { useState } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
+import { CSSTransition } from 'react-transition-group'
 
 export default function Menu() {
 	const [navOpen, setOpenNav] = useState(false)
+	const [showAnimation, setShowAnimation] = useState(false)
+
+	const handleClick = () => {
+		setShowAnimation(true)
+	}
+
+	const handleAnimationEnd = () => {
+		setShowAnimation(false)
+	}
 
 	const toggleNav = () => {
 		setOpenNav(!navOpen)
-	}
-
-	const pauseAnimation = () => {
-		setOpenNav(false)
 	}
 
 	const scrollToTop = () => {
@@ -41,35 +47,61 @@ export default function Menu() {
 			</div>
 			<div>
 				<button>
-					<IconMenu2 className='nav__burger-icon' onClick={toggleNav} />
-					<IconX className='nav__close-icon' />
+					{/* <IconMenu2
+						className='nav__burger-icon'
+						onClick={() => {
+							toggleNav()
+							handleClick()
+						}}
+					/> */}
+					{/* <IconMenu2
+						className='nav__burger-icon'
+						onClick={() => {
+							toggleNav()
+							handleClick()
+						}}
+					/> */}
+					<div
+						className='nav__burger-icon'
+						onClick={() => {
+							toggleNav()
+							handleClick()
+						}}>
+						<div className='nav__burger-hight-line'></div>
+						<div className='nav__burger-center-line'></div>
+						<div className='nav__burger-bottom-line'></div>
+					</div>
 				</button>
 			</div>
-			<div
-				className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'} ${
-					pauseAnimation ? 'active' : 'paused'
-				}`}>
-				<div className='nav__mobile-item'>
-					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
-						About Me
-					</Link>
+			<CSSTransition
+				in={showAnimation}
+				timeout={300}
+				classNames='animation-mobile-item'
+				unmountOnExit
+				onExited={handleAnimationEnd}>
+				<div className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'}`}>
+					<div className='nav__mobile-item'>
+						<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
+							About Me
+						</Link>
+					</div>
+					<div className='nav__mobile-item'>
+						<Link to='Skills' smooth={true} offset={-70} duration={500}>
+							Skills
+						</Link>
+					</div>
+					<div className='nav__mobile-item'>
+						<Link to='Certyfication' smooth={true} offset={-70} duration={500}>
+							Certyfication
+						</Link>
+					</div>
+					<div className='nav__mobile-item'>
+						<Link to='Contact' smooth={true} offset={-70} duration={500}>
+							Concact me
+						</Link>
+					</div>
 				</div>
-				<div className='nav__mobile-item'>
-					<Link to='Skills' smooth={true} offset={-70} duration={500}>
-						Skills
-					</Link>
-				</div>
-				<div className='nav__mobile-item'>
-					<Link to='Certyfication' smooth={true} offset={-70} duration={500}>
-						Certyfication
-					</Link>
-				</div>
-				<div className='nav__mobile-item'>
-					<Link to='Contact' smooth={true} offset={-70} duration={500}>
-						Concact me
-					</Link>
-				</div>
-			</div>
+			</CSSTransition>
 		</div>
 	)
 }

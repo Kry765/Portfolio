@@ -1,0 +1,12 @@
+@use './_colors.scss' as *;
+
+@mixin nav {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	padding: 2em;
+	background-color: $menu-color;
+	opacity: 0.8;
+	color: $main-color;
+}
