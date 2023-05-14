@@ -1,5 +1,5 @@
 @use './mixins' as *;
-
+@use './colors' as *;
 //display
 //position
 //width height
@@ -8,11 +8,12 @@
 .nav {
 	position: fixed;
 	top: 0;
-	background-color: rgba(150, 157, 163, 0.144);
+	background-color: $menu-color;
 	width: 100%;
 	height: 80px;
 
 	&__logo {
+		color: $main-color;
 		width: 40px;
 		height: 50px;
 		margin: 15px 25px;
@@ -20,6 +21,7 @@
 	}
 
 	&__burger-icon {
+		color: $main-color;
 		position: fixed;
 		right: 0;
 		top: 0;

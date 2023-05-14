@@ -1,107 +1,110 @@
+@use 'colors.scss' as *;
+
 .header {
 	&__title {
-		color: #fff;
 		padding-top: 3em;
-	}
-	&__letter1 {
-		animation: letter forwards;
-		animation-delay: 0.5s;
-	}
-	&__letter2 {
-		animation: letter forwards;
-		animation-delay: 0.7s;
-	}
-	&__letter4 {
-		animation: letter forwards;
-		animation-delay: 1s;
-	}
-	&__letter5 {
-		animation: letter forwards;
-		animation-delay: 1.05s;
-	}
-	&__letter6 {
-		animation: letter forwards;
-		animation-delay: 1.1s;
-	}
-	&__letter7 {
-		animation: letter forwards;
-		animation-delay: 1.15s;
-	}
-	&__letter8 {
-		animation: letter forwards;
-		animation-delay: 1.2s;
-	}
-	&__letter9 {
-		animation: letter forwards;
-		animation-delay: 1.25s;
-	}
-	&__letter10 {
-		animation: letter forwards;
-		animation-delay: 1.3s;
-	}
-	&__letter11 {
-		animation: letter forwards;
-		animation-delay: 1.35s;
-	}
-	&__letter12 {
-		animation: letter forwards;
-		animation-delay: 1.4s;
-	}
-	&__letter13 {
-		animation: letter forwards;
-		animation-delay: 1.45s;
-	}
-	&__letter14 {
-		animation: letter forwards;
-		animation-delay: 1.5s;
-	}
-	&__letter15 {
-		animation: letter forwards;
-		animation-delay: 1.55s;
-	}
-	&__letter16 {
-		animation: letter forwards;
-		animation-delay: 1.6s;
-	}
-	&__letter17 {
-		animation: letter forwards;
-		animation-delay: 1.65s;
-	}
-	&__letter18 {
-		animation: letter forwards;
-		animation-delay: 1.7s;
-	}
-	&__letter19 {
-		animation: letter forwards;
-		animation-delay: 1.8s;
-	}
-	&__letter20 {
-		animation: letter forwards;
-		animation-delay: 1.9s;
-	}
-	&__letter21 {
-		animation: letter forwards;
-		animation-delay: 2s;
-	}
-	&__letter22 {
-		animation: letter forwards;
-		animation-delay: 2.1s;
-	}
-	&__letter23 {
-		animation: letter forwards;
-		animation-delay: 2.2s;
-	}
-	&__letter24 {
-		animation: letter forwards;
-		animation-delay: 2.3s;
-	}
-	&__letter24 {
-		animation: letter forwards;
-		animation-delay: 2.4s;
-	}
-	&__letter25 {
-		animation: letter forwards;
-		animation-delay: 2.5s;
+		color: $text-color;
+
+		&__letter1 {
+			animation: letter forwards;
+			animation-delay: 0.5s;
+		}
+		&__letter2 {
+			animation: letter forwards;
+			animation-delay: 0.7s;
+		}
+		&__letter4 {
+			animation: letter forwards;
+			animation-delay: 1s;
+		}
+		&__letter5 {
+			animation: letter forwards;
+			animation-delay: 1.05s;
+		}
+		&__letter6 {
+			animation: letter forwards;
+			animation-delay: 1.1s;
+		}
+		&__letter7 {
+			animation: letter forwards;
+			animation-delay: 1.15s;
+		}
+		&__letter8 {
+			animation: letter forwards;
+			animation-delay: 1.2s;
+		}
+		&__letter9 {
+			animation: letter forwards;
+			animation-delay: 1.25s;
+		}
+		&__letter10 {
+			animation: letter forwards;
+			animation-delay: 1.3s;
+		}
+		&__letter11 {
+			animation: letter forwards;
+			animation-delay: 1.35s;
+		}
+		&__letter12 {
+			animation: letter forwards;
+			animation-delay: 1.4s;
+		}
+		&__letter13 {
+			animation: letter forwards;
+			animation-delay: 1.45s;
+		}
+		&__letter14 {
+			animation: letter forwards;
+			animation-delay: 1.5s;
+		}
+		&__letter15 {
+			animation: letter forwards;
+			animation-delay: 1.55s;
+		}
+		&__letter16 {
+			animation: letter forwards;
+			animation-delay: 1.6s;
+		}
+		&__letter17 {
+			animation: letter forwards;
+			animation-delay: 1.65s;
+		}
+		&__letter18 {
+			animation: letter forwards;
+			animation-delay: 1.7s;
+		}
+		&__letter19 {
+			animation: letter forwards;
+			animation-delay: 1.8s;
+		}
+		&__letter20 {
+			animation: letter forwards;
+			animation-delay: 1.9s;
+		}
+		&__letter21 {
+			animation: letter forwards;
+			animation-delay: 2s;
+		}
+		&__letter22 {
+			animation: letter forwards;
+			animation-delay: 2.1s;
+		}
+		&__letter23 {
+			animation: letter forwards;
+			animation-delay: 2.2s;
+		}
+		&__letter24 {
+			animation: letter forwards;
+			animation-delay: 2.3s;
+		}
+		&__letter24 {
+			animation: letter forwards;
+			animation-delay: 2.4s;
+		}
+		&__letter25 {
+			animation: letter forwards;
+			animation-delay: 2.5s;
+		}
 	}
 
 	@keyframes letter {
@@ -112,7 +115,6 @@
 		to {
 			width: 100%;
 			visibility: visible;
-			color: #000;
 		}
 	}
 
@@ -166,22 +168,33 @@
 	}
 
 	&__text {
+		color: $text-color;
+		font-size: 1.2rem;
 		padding: 1em;
 	}
 	&__button {
-		width: 9em;
-		height: 3em;
+		width: 12em;
+		height: 4em;
 		margin: 1em;
-		padding: 10px 25px;
+		padding: 1em;
 		border-radius: 20px;
-		border: 1px solid #aca1a1d7;
-		background-color: #fff;
 		transition: all 0.4s;
-	}
-	&__button:hover {
-		background-color: rgba(120, 224, 120, 0.63);
-		color: #fff;
-		cursor: pointer;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: $menu-color;
+		color: $main-color;
+		&--awarded {
+			width: 12em;
+			height: 4em;
+			margin: 1em;
+			padding: 1em;
+			border-radius: 20px;
+			transition: all 0.4s;
+			text-transform: uppercase;
+			font-weight: bold;
+			background-color: $secondly-color;
+			color: $main-color;
+		}
 	}
 }
 
