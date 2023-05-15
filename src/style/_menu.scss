@@ -49,12 +49,17 @@
 	}
 
 	&__burger-hight-line {
+		opacity: 0;
+	}
+	&--hide-line-top{
 		background-color: $text-color;
 		height: 5px;
 		width: 50px;
 		margin: 1em;
+		opacity: 0;
 		border-radius: 10px;
 	}
+
 
 	&__burger-center-line {
 		position: relative;

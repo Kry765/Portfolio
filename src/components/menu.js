@@ -1,16 +1,18 @@
-import { IconMenu2 } from '@tabler/icons-react'
-import { IconX } from '@tabler/icons-react'
 import { IconBrandCodepen } from '@tabler/icons-react'
 import '../style/reset.scss'
 import '../style/_menu.scss'
 import '../style/_mixins.scss'
 import { useState } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
-import { CSSTransition } from 'react-transition-group'
 
 export default function Menu() {
 	const [navOpen, setOpenNav] = useState(false)
 	const [inBorder, setInBorder] = useState(false)
+	const [inTopMenu, setInTopMenu] = useState(false)
+
+	const hideTopBurgerbar = () => {
+		setInTopMenu(!inTopMenu)
+	}
 
 	const bottomLine = () => {
 		setInBorder(!inBorder)
@@ -43,27 +45,14 @@ export default function Menu() {
 			</div>
 			<div>
 				<button>
-					{/* <IconMenu2
-						className='nav__burger-icon'
-						onClick={() => {
-							toggleNav()
-							handleClick()
-						}}
-					/> */}
-					{/* <IconMenu2
-						className='nav__burger-icon'
-						onClick={() => {
-							toggleNav()
-							handleClick()
-						}}
-					/> */}
 					<div
 						className='nav__burger-icon'
 						onClick={() => {
 							toggleNav()
 							bottomLine()
+							hideTopBurgerbar()
 						}}>
-						<div className='nav__burger-hight-line'></div>
+						<div className={hideTopBurgerbar ? 'nav__burger-hight-line--hide-line-top' : 'nav__burger-hight-line'}></div>
 						<div className='nav__burger-center-line'></div>
 						<div className='nav__burger-secondly-line'></div>
 						<div className='nav__burger-bottom-line'></div>
