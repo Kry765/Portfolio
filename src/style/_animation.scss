@@ -1,0 +1,63 @@
+//ANIMATION MOBILE-NAV
+
+@keyframes OpenNav {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+@keyframes CloseNav {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+
+//BOTTOM-LINE-MOBILE-NAV
+
+@keyframes move-line {
+	from {
+		width: 10px;
+	}
+	to {
+		width: 100%;
+	}
+}
+@keyframes back-move-line {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0%;
+	}
+}
+
+@keyframes rotate-icon {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(45deg);
+	}
+}
+@keyframes rotate-secondly-burger {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes hidden-burger {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

@@ -10,16 +10,11 @@ import { CSSTransition } from 'react-transition-group'
 
 export default function Menu() {
 	const [navOpen, setOpenNav] = useState(false)
-	const [openAnimation, setOpenAnimation] = useState(false)
+	const [inBorder, setInBorder] = useState(false)
 
-	const handleAnimation = () => {
-		setOpenAnimation(true)
-		setTimeout(() => {
-			setOpenAnimation(false)
-		}, 5000)
+	const bottomLine = () => {
+		setInBorder(!inBorder)
 	}
-
-	const bottomLine = openAnimation ? 'nav__mobile-item active' : 'your-component__mobile-item'
 
 	const toggleNav = () => {
 		setOpenNav(!navOpen)
@@ -66,7 +61,7 @@ export default function Menu() {
 						className='nav__burger-icon'
 						onClick={() => {
 							toggleNav()
-							handleAnimation()
+							bottomLine()
 						}}>
 						<div className='nav__burger-hight-line'></div>
 						<div className='nav__burger-center-line'></div>
@@ -75,29 +70,30 @@ export default function Menu() {
 					</div>
 				</button>
 			</div>
-			<div
-				className={`nav__mobile-items ${
-					navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'
-				} bottomLine`}>
+			<div className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'}`}>
 				<div className='nav__mobile-item'>
 					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
 						About Me
 					</Link>
+					<div className={inBorder ? 'nav__bottom-line--draw' : 'nav__bottom-line'}></div>
 				</div>
 				<div className='nav__mobile-item'>
 					<Link to='Skills' smooth={true} offset={-70} duration={500}>
 						Skills
 					</Link>
+					<div className={inBorder ? 'nav__bottom-line--draw' : 'nav__bottom-line'}></div>
 				</div>
 				<div className='nav__mobile-item'>
 					<Link to='Certyfication' smooth={true} offset={-70} duration={500}>
 						Certyfication
 					</Link>
+					<div className={inBorder ? 'nav__bottom-line--draw' : 'nav__bottom-line'}></div>
 				</div>
 				<div className='nav__mobile-item'>
 					<Link to='Contact' smooth={true} offset={-70} duration={500}>
 						Concact me
 					</Link>
+					<div className={inBorder ? 'nav__bottom-line--draw' : 'nav__bottom-line'}></div>
 				</div>
 			</div>
 		</div>

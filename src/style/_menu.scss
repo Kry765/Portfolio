@@ -1,5 +1,6 @@
 @use './mixins' as *;
 @use './colors' as *;
+@use './animation' as *;
 //display
 //position
 //width height
@@ -13,7 +14,7 @@
 	height: 80px;
 
 	&__logo {
-		color: $main-color;
+		color: $text-color;
 		width: 40px;
 		height: 50px;
 		margin: 15px 25px;
@@ -37,8 +38,8 @@
 		top: 0;
 		margin: 0.1em;
 		z-index: 100;
+		// color: $text-color;
 		// animation: rotate-secondly-burger 1s both;
-
 		// padding: 10px;
 		// background-color: aqua;
 		// width: 50px;
@@ -48,7 +49,7 @@
 	}
 
 	&__burger-hight-line {
-		background-color: $main-color;
+		background-color: $text-color;
 		height: 5px;
 		width: 50px;
 		margin: 1em;
@@ -57,7 +58,7 @@
 
 	&__burger-center-line {
 		position: relative;
-		background-color: $main-color;
+		background-color: $text-color;
 		height: 5px;
 		width: 50px;
 		margin: 1em;
@@ -66,44 +67,19 @@
 	&__burger-secondly-line {
 		position: absolute;
 		top: 18px;
-		background-color: $main-color;
+		background-color: $text-color;
 		height: 5px;
 		width: 50px;
 		margin: 1em;
 		border-radius: 10px;
 	}
 	&__burger-bottom-line {
-		background-color: $main-color;
+		background-color: $text-color;
+		color: $text-color;
 		height: 5px;
 		width: 50px;
 		margin: 1em;
 		border-radius: 10px;
-	}
-
-	@keyframes rotate-icon {
-		from {
-			transform: rotate(0);
-		}
-		to {
-			transform: rotate(45deg);
-		}
-	}
-	@keyframes rotate-secondly-burger {
-		from {
-			transform: rotate(0);
-		}
-		to {
-			transform: rotate(135deg);
-		}
-	}
-
-	@keyframes hidden-burger {
-		from {
-			opacity: 1;
-		}
-		to {
-			opacity: 0;
-		}
 	}
 
 	&__mobile-items {
@@ -118,64 +94,25 @@
 		}
 	}
 
-	@keyframes OpenNav {
-		from {
-			transform: translateX(100%);
-		}
-		to {
-			transform: translateX(0);
-		}
-	}
-	@keyframes CloseNav {
-		from {
-			transform: translateX(0);
-		}
-		to {
-			transform: translateX(100%);
-		}
-	}
-
 	&__mobile-item {
-		position: relative;
 		margin: 5em 1em;
 		padding: 1em;
 		text-transform: uppercase;
 		font-weight: bold;
+		color: $text-color;
 	}
-	&__mobile-item::before {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 1vw;
-		border-bottom: 3px solid $main-color;
-		content: '';
-		animation: move-line-left 5s both;
+	&__bottom-line {
+		margin: 2em 0;
+		background-color: $text-color;
+		height: 2px;
+		width: 10px;
+		animation: back-move-line 0.7s both;
 	}
-	&__mobile-item::after {
-		position: absolute;
-		bottom: 0;
-		right: 50%;
-		width: 1vw;
-		border-bottom: 3px solid $main-color;
-		content: '';
-		animation: move-line-right 5s both;
-	}
-
-	@keyframes move-line-right {
-		from {
-			width: 10%;
-		}
-		to {
-			width: 50%;
-		}
-	}
-	@keyframes move-line-left {
-		from {
-			width: 10%;
-		}
-		to {
-			width: 50%;
-		}
+	&__bottom-line--draw {
+		margin: 2em 0;
+		background-color: $text-color;
+		height: 2px;
+		animation: move-line 1.2s both;
 	}
 
 	&__desktop-items {
@@ -184,7 +121,7 @@
 		top: 0;
 		right: 0;
 		margin: 2em;
-		color: $main-color;
+		color: $text-color;
 		text-transform: uppercase;
 		font-weight: bold;
 	}
