@@ -5,7 +5,6 @@
 //position
 //width height
 //margin padding
-
 .nav {
 	position: fixed;
 	top: 0;
@@ -21,79 +20,46 @@
 		z-index: 10000;
 	}
 
-	// &__burger-icon {
-	// 	color: $main-color;
-	// 	position: fixed;
-	// 	right: 0;
-	// 	top: 0;
-	// 	width: 7em;
-	// 	min-height: 6em;
-	// 	padding: 1em;
-	// 	z-index: 100;
-	// 	border: none;
-	// }
 	&__burger-icon {
-		position: fixed;
+		position: absolute;
 		right: 0;
-		top: 0;
+		top: 10px;
 		margin: 0.1em;
 		z-index: 100;
-		// color: $text-color;
-		// animation: rotate-secondly-burger 1s both;
-		// padding: 10px;
-		// background-color: aqua;
-		// width: 50px;
-		// height: 50px;
-		// border-bottom: 20px solid $main-color;
-		// border-top: 20px solid $main-color;
 	}
 
-	&__burger-hight-line {
-		opacity: 0;
+	&__burger-top-line {
+		@include burgerIcon;
+		&--close-top-line {
+			@include closeBurger;
+			margin: 30px 10px;
+			transform: rotate(45deg);
+		}
 	}
-	&--hide-line-top{
-		background-color: $text-color;
-		height: 5px;
-		width: 50px;
-		margin: 1em;
-		opacity: 0;
-		border-radius: 10px;
-	}
-
-
 	&__burger-center-line {
-		position: relative;
-		background-color: $text-color;
-		height: 5px;
-		width: 50px;
-		margin: 1em;
-		border-radius: 10px;
+		@include burgerIcon;
+		&--close-top-line {
+			opacity: 1;
+		}
 	}
-	&__burger-secondly-line {
-		position: absolute;
-		top: 18px;
-		background-color: $text-color;
-		height: 5px;
-		width: 50px;
-		margin: 1em;
-		border-radius: 10px;
-	}
-	&__burger-bottom-line {
-		background-color: $text-color;
-		color: $text-color;
-		height: 5px;
-		width: 50px;
-		margin: 1em;
-		border-radius: 10px;
+	&__burger-support-line {
+		@include burgerIcon;
+		&--close-support-line {
+			@include closeBurger;
+			margin: 30px 10px;
+			position: absolute;
+			top: 0;
+			transform: rotate(135deg);
+		}
 	}
 
 	&__mobile-items {
 		transform: translateX(0%);
-		&--active {
+		&--active-nav {
 			animation: CloseNav 1s both;
 			@include nav;
 		}
-		&--close {
+		&--close-nav {
 			animation: OpenNav 1s both;
 			@include nav;
 		}
@@ -143,9 +109,6 @@
 		&__burger-icon,
 		&__mobile-items {
 			display: none;
-			&--close {
-				display: none;
-			}
 		}
 		&__desktop-items {
 			display: block;

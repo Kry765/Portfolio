@@ -17,9 +17,9 @@ function App() {
 				<Header id='Header' />
 			</header>
 			{/* <main> */}
-			{/* <section> */}
-			{/* <Aboutme id='Aboutme' /> */}
-			{/* </section> */}
+			<section>
+				<Aboutme id='Aboutme' />
+			</section>
 			{/* <section> */}
 			{/* <Skills id='Skills' /> */}
 			{/* </section> */}

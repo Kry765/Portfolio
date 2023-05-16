@@ -7,19 +7,19 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 
 export default function Menu() {
 	const [navOpen, setOpenNav] = useState(false)
-	const [inBorder, setInBorder] = useState(false)
-	const [inTopMenu, setInTopMenu] = useState(false)
-
-	const hideTopBurgerbar = () => {
-		setInTopMenu(!inTopMenu)
+	const toggleNav = () => {
+		setOpenNav(!navOpen)
 	}
 
+	const [inBorder, setInBorder] = useState(false)
 	const bottomLine = () => {
 		setInBorder(!inBorder)
 	}
 
-	const toggleNav = () => {
-		setOpenNav(!navOpen)
+	const [inTopMenu, setInTopMenu] = useState(false)
+
+	const hideTopBurgerbar = () => {
+		setInTopMenu(!inTopMenu)
 	}
 
 	const scrollToTop = () => {
@@ -52,14 +52,15 @@ export default function Menu() {
 							bottomLine()
 							hideTopBurgerbar()
 						}}>
-						<div className={hideTopBurgerbar ? 'nav__burger-hight-line--hide-line-top' : 'nav__burger-hight-line'}></div>
-						<div className='nav__burger-center-line'></div>
-						<div className='nav__burger-secondly-line'></div>
-						<div className='nav__burger-bottom-line'></div>
+						<div className={inTopMenu ? 'nav__burger-top-line--close-top-line' : 'nav__burger-top-line'}></div>
+						<div className={inTopMenu ? 'nav__burger-center-line--close-center-line' : 'nav__burger-center-line'}></div>
+						<div
+							className={inTopMenu ? 'nav__burger-support-line--close-support-line' : 'nav__burger-support-line'}></div>
 					</div>
 				</button>
 			</div>
-			<div className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close' : 'nav__mobile-items--active'}`}>
+			<div
+				className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close-nav' : 'nav__mobile-items--active-nav'}`}>
 				<div className='nav__mobile-item'>
 					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
 						About Me
