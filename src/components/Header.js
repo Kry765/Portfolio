@@ -35,9 +35,8 @@ export default function Hedaer() {
 			<div className='header__header-wrapper'>
 				<div>{/* <img src={photo} alt='two people work from content' className='header__primary-photo' /> */}</div>
 				<div>
-					<p className='header__text'>Thank you for being here, let me tell you something about myself</p>
-					<button className='header__button--awarded'>Let's Go</button>
-					<button className='header__button'>Contact Me</button>
+					<p className='header__text'>Thank you for being here, let me tell you something about myself.</p>
+					<button className='header__button'>Let's Go</button>
 				</div>
 			</div>
 		</div>
