@@ -14,12 +14,12 @@ function App() {
 				<nav>
 					<Menu id='Menu' />
 				</nav>
-				<Header id='Header' />
+				{/* <Header id='Header' /> */}
 			</header>
 			{/* <main> */}
-			<section>
+			{/* <section>
 				<Aboutme id='Aboutme' />
-			</section>
+			</section> */}
 			{/* <section> */}
 			{/* <Skills id='Skills' /> */}
 			{/* </section> */}

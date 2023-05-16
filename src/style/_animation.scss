@@ -35,3 +35,21 @@
 		width: 0%;
 	}
 }
+
+@keyframes open-close-right {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes open-close-left {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(45);
+	}
+}

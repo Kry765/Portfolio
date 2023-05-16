@@ -13,11 +13,13 @@
 	height: 80px;
 
 	&__logo {
+		position: fixed;
+		top: 0;
 		color: $text-color;
 		width: 40px;
 		height: 50px;
 		margin: 15px 25px;
-		z-index: 10000;
+		z-index: 100;
 	}
 
 	&__burger-icon {
@@ -34,6 +36,7 @@
 			@include closeBurger;
 			margin: 30px 10px;
 			transform: rotate(45deg);
+			animation: open-close-left 1s both;
 		}
 	}
 	&__burger-center-line {
@@ -50,6 +53,7 @@
 			position: absolute;
 			top: 0;
 			transform: rotate(135deg);
+			animation: open-close-right 1s both;
 		}
 	}
 
@@ -98,9 +102,11 @@
 	}
 	&__desktop-item {
 		padding: 1.5em;
+		transition: color 0.5s;
 	}
 	&__desktop-item:hover {
 		cursor: pointer;
+		color: $secondly-color;
 	}
 }
 
