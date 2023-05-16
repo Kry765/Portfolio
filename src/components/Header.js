@@ -30,11 +30,10 @@ export default function Hedaer() {
 				<span className='header__letter23'>h</span>
 				<span className='header__letter24'>e</span>
 				<span className='header__letter25'>r</span>
+				<span className='header__cursor'>|</span>
 			</h1>
 			<div className='header__header-wrapper'>
-				<div>
-					<img src={photo} alt='two people work from content' className='header__primary-photo' />
-				</div>
+				<div>{/* <img src={photo} alt='two people work from content' className='header__primary-photo' /> */}</div>
 				<div>
 					<p className='header__text'>Thank you for being here, let me tell you something about myself</p>
 					<button className='header__button--awarded'>Let's Go</button>

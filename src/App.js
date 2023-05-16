@@ -14,7 +14,7 @@ function App() {
 				<nav>
 					<Menu id='Menu' />
 				</nav>
-				{/* <Header id='Header' /> */}
+				<Header id='Header' />
 			</header>
 			{/* <main> */}
 			{/* <section>
