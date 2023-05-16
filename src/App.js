@@ -16,10 +16,10 @@ function App() {
 				</nav>
 				<Header id='Header' />
 			</header>
-			{/* <main> */}
-			{/* <section>
+			<main>
+			<section>
 				<Aboutme id='Aboutme' />
-			</section> */}
+			</section>
 			{/* <section> */}
 			{/* <Skills id='Skills' /> */}
 			{/* </section> */}
@@ -29,7 +29,7 @@ function App() {
 			{/* <section> */}
 			{/* <Contact id='Contact' /> */}
 			{/* </section> */}
-			{/* </main> */}
+			</main>
 			{/* <footer> */}
 			{/* <Footer /> */}
 			{/* </footer> */}
