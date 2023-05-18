@@ -30,6 +30,9 @@ export default function Menu() {
 		<div className='nav' id='Menu'>
 			<IconBrandCodepen className='nav__logo' onClick={scrollToTop} />
 			<div className='nav__desktop-items'>
+				<Link to='#' smooth={true} offset={-70} duration={500} className='nav__desktop-item' onClick={scrollToTop}>
+					Home
+				</Link>
 				<Link to='Aboutme' smooth={true} offset={-70} duration={500} className='nav__desktop-item'>
 					About Me
 				</Link>
@@ -61,6 +64,12 @@ export default function Menu() {
 			</div>
 			<div
 				className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close-nav' : 'nav__mobile-items--active-nav'}`}>
+				<div className='nav__mobile-item'>
+					<Link to='Home' smooth={true} offset={-70} duration={500}>
+						Home
+					</Link>
+					<div className={inBorder ? 'nav__bottom-line--draw' : 'nav__bottom-line'}></div>
+				</div>
 				<div className='nav__mobile-item'>
 					<Link to='Aboutme' smooth={true} offset={-70} duration={500}>
 						About Me

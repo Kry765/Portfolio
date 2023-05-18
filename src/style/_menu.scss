@@ -13,10 +13,11 @@
 	background-color: $menu-color;
 
 	&__logo {
+		display: none;
 		position: fixed;
 		top: 0;
-		width: 6em;
-		height: 6em;
+		width: 5em;
+		height: 5em;
 		margin: 5px 10px;
 		color: $text-color;
 		z-index: 100;
@@ -76,8 +77,9 @@
 	}
 
 	&__mobile-item {
-		margin: 5em 1em;
+		font-size: 0.6rem;
 		padding: 1em;
+		// margin-top: 1em;
 		text-transform: uppercase;
 		font-weight: bold;
 		color: $text-color;
@@ -87,6 +89,7 @@
 		width: 10px;
 		height: 2px;
 		margin: 2em 0;
+		background-color: $text-color;
 	}
 	&__bottom-line--draw {
 		animation: move-line 1.2s both;
@@ -121,7 +124,8 @@
 		&__mobile-items {
 			display: none;
 		}
-		&__desktop-items {
+		&__desktop-items,
+		&__logo {
 			display: block;
 		}
 	}
