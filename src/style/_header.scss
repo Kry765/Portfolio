@@ -3,6 +3,7 @@
 @use './mixins' as *;
 
 .header {
+	margin-top: 10%;
 	&__title {
 		padding-top: 3em;
 		font-size: 2rem;
@@ -165,6 +166,7 @@
 	width: 100%;
 	height: 100vh;
 	&__primary-photo {
+		display: none;
 		width: 400px;
 		height: 400px;
 		padding: 20px;
@@ -201,5 +203,14 @@
 	&__button:hover {
 		background-color: $main-color;
 		border: 3px solid $menu-color;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		margin-top: 15%;
+		&__primary-photo {
+			display: block;
+		}
 	}
 }

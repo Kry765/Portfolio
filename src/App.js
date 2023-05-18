@@ -17,18 +17,18 @@ function App() {
 				<Header id='Header' />
 			</header>
 			<main>
-			<section>
+				{/* <section>
 				<Aboutme id='Aboutme' />
-			</section>
-			{/* <section> */}
-			{/* <Skills id='Skills' /> */}
-			{/* </section> */}
-			{/* <section> */}
-			{/* <Certyfication id='Certyfication' /> */}
-			{/* </section> */}
-			{/* <section> */}
-			{/* <Contact id='Contact' /> */}
-			{/* </section> */}
+			</section> */}
+				{/* <section> */}
+				{/* <Skills id='Skills' /> */}
+				{/* </section> */}
+				{/* <section> */}
+				{/* <Certyfication id='Certyfication' /> */}
+				{/* </section> */}
+				{/* <section> */}
+				{/* <Contact id='Contact' /> */}
+				{/* </section> */}
 			</main>
 			{/* <footer> */}
 			{/* <Footer /> */}
