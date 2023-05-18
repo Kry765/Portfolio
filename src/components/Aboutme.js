@@ -1,5 +1,5 @@
 import React from 'react'
-import picture from '../img/3255337.jpg'
+import picture from '../img/zdj_portfolio_2.jpg'
 import '../style/_aboutme.scss'
 import '../style/reset.scss'
 export default function Aboutme() {
@@ -7,8 +7,8 @@ export default function Aboutme() {
 		<div className='about-me' id='Aboutme'>
 			<h1>About me</h1>
 			<div className='about-me__card'>
-				<div className='about-me__foto'>
-					<img src={picture} className='about-me__fototest' />
+				<div className='about-me__foto-wrapper'>
+					<img src={picture} className='about-me__foto' />
 				</div>
 				<div className='about-me__text'>
 					Hi, I'm Chris, I'm 23 years old and I'm studying computer science and more specifically specialization

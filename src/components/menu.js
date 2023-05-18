@@ -65,7 +65,7 @@ export default function Menu() {
 			<div
 				className={`nav__mobile-items ${navOpen ? 'nav__mobile-items--close-nav' : 'nav__mobile-items--active-nav'}`}>
 				<div className='nav__mobile-item'>
-					<Link to='Home' smooth={true} offset={-70} duration={500}>
+					<Link to='Home' smooth={true} offset={-70} duration={500} onClick={scrollToTop}>
 						Home
 					</Link>
 					<div className={inBorder ? 'nav__bottom-line--draw' : 'nav__bottom-line'}></div>
