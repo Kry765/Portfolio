@@ -36,6 +36,7 @@
 		right: 0;
 		margin: 0.1em;
 		z-index: 100;
+		transition: color 1s;
 	}
 
 	&__burger-top-line {
@@ -83,6 +84,7 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		color: $text-color;
+		transition: color 0.5s;
 	}
 	&__bottom-line {
 		animation: back-move-line 0.7s both;
@@ -114,7 +116,9 @@
 		z-index: 1000;
 		transition: color 0.5s;
 	}
-	&__desktop-item:hover {
+	&__desktop-item:hover,
+	&__burger-icon:hover,
+	&__mobile-item:hover {
 		cursor: pointer;
 		color: $secondly-color;
 	}

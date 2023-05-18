@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/_header.scss'
-import photo from '../img/5107035.jpg'
+import photo from '../img/logo.png'
 export default function Hedaer() {
 	return (
 		<div className='header'>
