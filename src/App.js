@@ -23,9 +23,9 @@ function App() {
 				<section>
 					<Skills id='Skills' />
 				</section>
-				{/* <section> */}
-				{/* <Certyfication id='Certyfication' /> */}
-				{/* </section> */}
+				<section>
+					<Certyfication id='Certyfication' />
+				</section>
 				{/* <section> */}
 				{/* <Contact id='Contact' /> */}
 				{/* </section> */}
