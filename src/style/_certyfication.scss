@@ -1,7 +1,11 @@
 .certyfication {
 	display: flex;
-	justify-content: center;
-	flex-direction: row;
+	align-items: center;
+	flex-direction: column;
 	width: 100%;
 	height: 100vh;
+	&__img-diploma {
+		margin: 1em;
+		width: 20%;
+	}
 }
