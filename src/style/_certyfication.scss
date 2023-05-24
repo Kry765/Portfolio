@@ -1,11 +1,24 @@
 .certyfication {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
 	height: 100vh;
+	margin: 1em;
+	&__diplomas{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		text-align: center;
+		margin: 2em;
+	}
+	&__diploma{
+		display: flex;
+		justify-content: center;
+	}
 	&__img-diploma {
-		margin: 1em;
-		width: 20%;
+		width: 150px;
+		margin: 1.5em;
 	}
 }
