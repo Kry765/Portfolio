@@ -27,7 +27,6 @@ export default function Footer() {
 			</div>
 			<div>
 				<p>Kry765 | &copy; All right reserved 2023</p>
-				<a href="https://pl.freepik.com/darmowe-wektory/ilustracja-koncepcja-struktury-tresci_12977759.htm#query=web&position=10&from_view=search&track=sph">Obraz autorstwa storyset</a> na Freepik
 			</div>
 		</div>
 	)

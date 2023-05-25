@@ -30,9 +30,9 @@ function App() {
 				{/* <Contact id='Contact' /> */}
 				{/* </section> */}
 			</main>
-			{/* <footer> */}
-			{/* <Footer /> */}
-			{/* </footer> */}
+			<footer>
+				<Footer />
+			</footer>
 		</div>
 	)
 }

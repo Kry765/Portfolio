@@ -11,12 +11,12 @@ export default function Certyfication() {
 				<h1>Certyfication</h1>
 			</div>
 			<div className='certyfication__diplomas'>
-				<div className='certyfiaction_diploma'>
+				{/* <div className='certyfiaction_diploma'>
 					<h3>English</h3>
 					<div>
 					<img src={Udemy1} className='certyfication__img-diploma' alt='certyfication' />
 					</div>
-				</div>
+				</div> */}
 				<div className='certyfiaction_diploma'>
 					<h3>Udemy</h3>
 					<div>
