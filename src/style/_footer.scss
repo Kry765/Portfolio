@@ -13,7 +13,10 @@
 	&__socialmedia-item {
 		font-size: 2rem;
 		padding: 0.5em;
-		// margin: 0.5em;
+		margin: 0 1em;
+	}
+	&__socialmedia-item:hover {
+		cursor: pointer;
 	}
 
 	&__bottom-menu-items {

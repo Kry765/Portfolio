@@ -22,10 +22,11 @@
 		border: 1px solid gray;
 		text-align: center;
 		border-radius: 25px;
-		transition: padding 1s 0.5em;
+		transition: all 1s;
 	}
 	&__card:hover {
 		cursor: pointer;
+		transform: scale(1.2);
 	}
 
 	&__icon {
