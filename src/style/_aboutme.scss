@@ -1,3 +1,7 @@
+@use './mixins' as *;
+@use './colors' as *;
+@use './animation' as *;
+
 .about-me {
 	display: flex;
 	align-items: center;
@@ -6,6 +10,7 @@
 	min-height: 100vh;
 	padding: 2em 0.5em;
 	margin-top: 3em;
+	color: $menu-text-color;
 	&__card {
 		display: flex;
 		justify-content: center;
@@ -26,7 +31,7 @@
 	}
 
 	&__foto:hover {
-		transform: scale(0.8);
+		transform: scale(1.1);
 	}
 	&__text {
 		max-width: 50%;
@@ -36,6 +41,7 @@
 		padding: 1em;
 		font-size: 1.2rem;
 		line-height: 1.5em;
+		color: $text-color;
 	}
 }
 

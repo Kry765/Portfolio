@@ -10,7 +10,7 @@
 	top: 0;
 	width: 100%;
 	height: 80px;
-	background-color: $menu-color;
+	// color: $menu-text-color;
 	z-index: 1000;
 
 	&__logo {
@@ -20,14 +20,14 @@
 		width: 5em;
 		height: 5em;
 		margin: 5px 10px;
-		color: $text-color;
+		color: $menu-text-color;
 		z-index: 100;
 		padding: 1em;
 		transition: color 1s;
 	}
 	&__logo:hover {
 		cursor: pointer;
-		color: $secondly-color;
+		color: $contrast-color;
 	}
 
 	&__burger-icon {
@@ -83,7 +83,7 @@
 		padding: 1em;
 		text-transform: uppercase;
 		font-weight: bold;
-		color: $text-color;
+		color: $menu-text-color;
 		transition: color 0.5s;
 	}
 	&__bottom-line {
@@ -91,13 +91,13 @@
 		width: 10px;
 		height: 2px;
 		margin: 2em 0;
-		background-color: $text-color;
+		background-color: $white-color;
 	}
 	&__bottom-line--draw {
 		animation: move-line 1.2s both;
 		height: 2px;
 		margin: 2em 0;
-		background-color: $text-color;
+		background-color: $white-color;
 	}
 
 	&__desktop-items {
@@ -106,7 +106,6 @@
 		right: 0;
 		display: none;
 		margin: 2em;
-		color: $text-color;
 		text-transform: uppercase;
 		font-weight: bold;
 	}
@@ -115,12 +114,13 @@
 		padding: 1.5em;
 		z-index: 1000;
 		transition: color 0.5s;
+		color: $menu-text-color;
 	}
 	&__desktop-item:hover,
 	&__burger-icon:hover,
 	&__mobile-item:hover {
 		cursor: pointer;
-		color: $secondly-color;
+		color: $contrast-color;
 	}
 }
 

@@ -11,6 +11,7 @@
 	text-align: center;
 	width: 100%;
 	height: 100vh;
+	color: $menu-text-color;
 
 	&__title {
 		font-size: 2rem;
@@ -166,12 +167,15 @@
 	}
 
 	&__primary-photo {
+		position: relative;
+		// background-color: rgba(0, 0, 0, 0.068);
 		display: none;
 		width: 400px;
 		height: 400px;
 		padding: 20px;
 		transition: padding 0.5s;
 	}
+
 	&__primary-photo:hover {
 		padding: 5px;
 	}
@@ -186,23 +190,23 @@
 	&__text {
 		font-size: 1.2rem;
 		padding: 1em;
+		color: $text-color;
 	}
 	&__button {
-		background: none;
-		border: 3px solid $main-color;
+		background-color: $contrast-color;
 		width: 12em;
 		height: 4em;
 		margin: 1em;
 		padding: 1em;
 		border-radius: 20px;
-		color: $text-color;
+		color: $white-color;
+		font-weight: bold;
 		transition: all 0.4s;
 		text-transform: uppercase;
 		cursor: pointer;
 	}
 	&__button:hover {
-		background-color: $main-color;
-		border: 3px solid $menu-color;
+		background-color: $menu-text-color;
 	}
 }
 

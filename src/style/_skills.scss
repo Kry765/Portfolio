@@ -1,8 +1,13 @@
+@use './mixins' as *;
+@use './colors' as *;
+@use './animation' as *;
+
 .skills {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	max-width: 100%;
+	color: $menu-text-color;
 	&__cards {
 		display: flex;
 		justify-content: center;
@@ -19,7 +24,7 @@
 		height: 400px;
 		width: 300px;
 		margin: 2em;
-		border: 1px solid gray;
+		border: 2px double $menu-text-color;
 		text-align: center;
 		border-radius: 25px;
 		transition: all 1s;
@@ -31,6 +36,7 @@
 
 	&__icon {
 		font-size: 15rem;
+		color: $menu-text-color;
 	}
 	&__progress-bar {
 		overflow: hidden;
@@ -39,12 +45,12 @@
 		width: 80%;
 		height: 10px;
 		border-radius: 25px;
-		border: 1px solid gray;
+		border: 1px solid $contrast-color;
 		&--bem {
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 50%;
 			height: 10px;
 		}
@@ -52,7 +58,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 25%;
 			height: 10px;
 		}
@@ -60,7 +66,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 60%;
 			height: 10px;
 		}
@@ -68,7 +74,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 90%;
 			height: 10px;
 		}
@@ -76,7 +82,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 80%;
 			height: 10px;
 		}
@@ -84,7 +90,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 80%;
 			height: 10px;
 		}
@@ -92,7 +98,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 60%;
 			height: 10px;
 		}
@@ -100,7 +106,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 40%;
 			height: 10px;
 		}
@@ -108,7 +114,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: $contrast-color;
 			width: 30%;
 			height: 10px;
 		}

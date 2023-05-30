@@ -6,14 +6,13 @@
 	width: 100vw;
 	height: 100vh;
 	padding: 2em;
-	background-color: $menu-color;
-	opacity: 0.9;
-	color: $main-color;
+	background-color: $menu-text-color;
+	opacity: 0.8;
+	color: $menu-text-color;
 }
 
 @mixin burgerIcon {
-	background-color: $text-color;
-	color: $text-color;
+	background-color: $menu-text-color;
 	height: 5px;
 	width: 50px;
 	margin: 1em;
@@ -22,8 +21,7 @@
 }
 
 @mixin closeBurger {
-	background-color: $text-color;
-	color: $text-color;
+	background-color: $white-color;
 	height: 5px;
 	width: 50px;
 	margin: 1em;
