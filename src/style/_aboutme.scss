@@ -2,6 +2,7 @@
 @use './colors' as *;
 @use './animation' as *;
 
+
 .about-me {
 	display: flex;
 	align-items: center;
@@ -34,14 +35,14 @@
 		transform: scale(1.1);
 	}
 	&__text {
-		max-width: 50%;
-		overflow: hidden;
-		overflow-wrap: break-word;
-		text-align: center;
 		padding: 1em;
 		font-size: 1.2rem;
 		line-height: 1.5em;
 		color: $text-color;
+	}
+	&__list-style{
+		color: $contrast-color;
+		margin: 0 0.5em;
 	}
 }
 

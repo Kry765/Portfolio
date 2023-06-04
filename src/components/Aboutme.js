@@ -2,6 +2,8 @@ import React from 'react'
 import picture from '../img/zdj_portfolio_2.jpg'
 import '../style/_aboutme.scss'
 import '../style/reset.scss'
+import {HiLightningBolt} from 'react-icons/hi';
+
 export default function Aboutme() {
 	return (
 		<div className='about-me' id='Aboutme'>
@@ -11,9 +13,12 @@ export default function Aboutme() {
 					<img src={picture} className='about-me__foto' />
 				</div>
 				<div className='about-me__text'>
-					Hi, I'm Chris, I'm 23 years old and I'm studying computer science and more specifically specialization
-					WebDeveloper. Now i am on the 3 years learn. My dream is work as professional Web-Developer and create
-					beautiful website from the people.
+					<div><HiLightningBolt className='about-me__list-style'/>My name is Christopher</div>
+					<div><HiLightningBolt className='about-me__list-style'/>I'm 23 years old</div>
+					<div><HiLightningBolt className='about-me__list-style'/>I studying computer science
+					<div><HiLightningBolt className='about-me__list-style'/> Now i am on the 3 years learn</div>
+					WebDeveloper.</div>
+					<div><HiLightningBolt className='about-me__list-style'/>My dream is work as professional Web-Developer</div>
 				</div>
 			</div>
 		</div>
