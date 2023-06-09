@@ -2,13 +2,12 @@
 @use './colors' as *;
 @use './animation' as *;
 
-
 .about-me {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	max-width: 100%;
-	min-height: 100vh;
+	min-height: 100%;
 	padding: 2em 0.5em;
 	margin-top: 3em;
 	color: $menu-text-color;
@@ -37,10 +36,11 @@
 	&__text {
 		padding: 1em;
 		font-size: 1.2rem;
-		line-height: 1.5em;
+		line-height: 2em;
 		color: $text-color;
+		min-width: 40%;
 	}
-	&__list-style{
+	&__list-style {
 		color: $contrast-color;
 		margin: 0 0.5em;
 	}
