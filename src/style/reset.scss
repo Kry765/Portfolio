@@ -14,11 +14,17 @@ button {
 body {
 	// background-color: $menu-color;
 	font-family: 'Ubuntu', sans-serif;
-	color: $text-color;
 	font-size: 16px;
+	background-color: $main-color;
+	color: $white-color;
 }
 
 a {
 	text-decoration: none;
-	color: #fff;
+	color: $white-color;
+}
+
+h1,
+h2 {
+	color: $white-color;
 }
